@@ -1,13 +1,13 @@
 
-Elevator
+# Elevator
 
 4 elevator cars with composed stereo sound.
 
-# Sensors:
+## Sensors:
 
 * Floor passing sensor
 * Door opening sensor
 
-# Hardware:
+## Hardware:
 
 * http://www.ontrak.net/ADU208.htm
