@@ -12,21 +12,21 @@
 
 * http://www.ontrak.net/ADU208.htm
 
-Elevators
+# Elevators
 
 Two Signals From Each Car...
 
-#FULL SIGNAL
+## Full Signal
 * 0:00 Full signal triggered and Voice announcement triggered “Floor 1"
 * 0:05 Doors begin opening
 * 0:06 Doors Finish opening
 * 0:11 Doors Close 
 
-#SHORT SIGNAL
+## Short Signal
 
-0:00 Doors begin opening and Short Signal Triggered
-0:01 Doors Finish opening
-0:06 Doors Close 
+* 0:00 Doors begin opening and Short Signal Triggered
+* 0:01 Doors Finish opening
+* 0:06 Doors Close 
 
 #Rules
 
