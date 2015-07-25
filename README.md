@@ -17,10 +17,10 @@ Elevators
 Two Signals From Each Car...
 
 #FULL SIGNAL
-0:00 Full signal triggered and Voice announcement triggered “Floor 1"
-0:05 Doors begin opening
-0:06 Doors Finish opening
-0:11 Doors Close 
+* 0:00 Full signal triggered and Voice announcement triggered “Floor 1"
+* 0:05 Doors begin opening
+* 0:06 Doors Finish opening
+* 0:11 Doors Close 
 
 #SHORT SIGNAL
 
