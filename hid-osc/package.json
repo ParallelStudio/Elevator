@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^3.10.0",
-    "node-hid": "^0.4.0"
+    "node-hid": "^0.4.0",
+    "node-osc": "^1.1.0"
   }
 }
