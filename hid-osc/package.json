@@ -1,0 +1,15 @@
+{
+  "name": "hid-osc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^3.10.0",
+    "node-hid": "^0.4.0"
+  }
+}
