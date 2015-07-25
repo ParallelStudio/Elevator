@@ -37,12 +37,12 @@ Signals
 Soundfiles
 
 Bass 
-- triggers every time
+triggers every time
 LowMids  
-- triggers every time
+triggers every time
 highMids_(1-4) 
-- play each one in numbered sequence over and over again so that the four files are triggered sequentially
+play each one in numbered sequence over and over again so that the four files are triggered sequentially
 highs (1-3) 
-- play each one in numbered sequence over and over again so that the three files are triggered sequentially
+play each one in numbered sequence over and over again so that the three files are triggered sequentially
 Plucks (1-2)
- - play randomly and intersperse with not playing any plucks on some triggers (trigger one of the pluck sound every other or every third time)
+ play randomly and intersperse with not playing any plucks on some triggers (trigger one of the pluck sound every other or every third time)
