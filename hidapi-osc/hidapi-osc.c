@@ -9,10 +9,19 @@
 #include "hidapi-osc.h"
 
 int last_state = 0;
+char *host;
+int port;
 
 int main(int argc, char* argv[]){
 	hid_device *handle;
 	unsigned char resbuf[8];
+
+	if(argc < 3){
+		usage();
+		return 1;
+	}
+	host = argv[1];
+	port = atoi(argv[2]);
 
 	handle = hid_open(VENDOR_ID, DEVICE_ID, NULL);
 	hid_set_nonblocking(handle, 0);	//blocking mode ftw
@@ -37,11 +46,7 @@ int main(int argc, char* argv[]){
 }
 
 int send_ontrak_command(hid_device *handle){
-	unsigned char buf[8];
-	memset(buf, 0, 8);
-	buf[0] = 0x01;	//first byte is 1, which says incoming data is ascii
-	buf[1] = 'P';
-	buf[2] = 'I';	//PI command reads both PA and PB in one go, with ascii response
+	unsigned char buf[] = { 0x01, 'P', 'I', 0, 0, 0, 0, 0 };
 	int res = hid_write(handle, buf, 8);
 	if(res < 0) {
 		printf("Unable to write()!\n");
@@ -52,4 +57,8 @@ int send_ontrak_command(hid_device *handle){
 int send_osc(int state){
 	printf("Sending OSC: %d\n", state);
 	return 0;
+}
+
+void usage(){
+	printf("Usage: hidapi-osc <host> <port>\n");
 }
