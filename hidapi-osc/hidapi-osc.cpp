@@ -39,7 +39,7 @@ int main(int argc, char* argv[]){
 		send_ontrak_command(handle);
 		int res = hid_read(handle, resbuf, 8);
 		if(res <= 0){
-			printf("ERROR reading");
+			printf("ERROR reading\n");
 		}
 		else{
 			fprintf(stdout, ".");
