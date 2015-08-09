@@ -1,0 +1,32 @@
+#N canvas 158 244 640 531 10;
+#X obj 23 50 vcar 1;
+#X obj 23 30 tgl 15 0 empty door1 empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 69 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 519 24 ontrak;
+#X obj 519 48 to_cars;
+#X obj 94 30 tgl 15 0 empty door2 empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 140 31 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 94 50 vcar 2;
+#X obj 164 51 vcar 1;
+#X obj 164 31 tgl 15 0 empty door3 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 210 32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 235 31 tgl 15 0 empty door4 empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 281 32 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 235 51 vcar 2;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 4 0;
+#X connect 5 0 7 0;
+#X connect 6 0 7 1;
+#X connect 9 0 8 0;
+#X connect 10 0 8 1;
+#X connect 11 0 13 0;
+#X connect 12 0 13 1;
