@@ -6,11 +6,16 @@
 #include <unistd.h>
 #include <string.h>
 #include <hidapi/hidapi.h>
+#include <oscpack/osc/OscOutboundPacketStream.h>
+#include <oscpack/ip/UdpSocket.h>
 #include "hidapi-osc.h"
 
-int last_state = 0;
+#define OUTPUT_BUFFER_SIZE 1024
+
+int last_state = -1;
 char *host;
 int port;
+int dots = 0;
 
 int main(int argc, char* argv[]){
 	hid_device *handle;
@@ -23,8 +28,12 @@ int main(int argc, char* argv[]){
 	host = argv[1];
 	port = atoi(argv[2]);
 
+	printf("Opening ONTRAK device...\n");
 	handle = hid_open(VENDOR_ID, DEVICE_ID, NULL);
 	hid_set_nonblocking(handle, 0);	//blocking mode ftw
+	printf("Device opened and set to blocking mode.");
+
+	UdpTransmitSocket transmitSocket( IpEndpointName( host, port ) );
 
 	while(true){
 		send_ontrak_command(handle);
@@ -33,12 +42,17 @@ int main(int argc, char* argv[]){
 			printf("ERROR reading");
 		}
 		else{
-			printf("Data: ");
+			fprintf(stdout, ".");
+			fflush(stdout);
+			if(++dots > 80){
+				printf("\n");
+				dots = 0;
+			}
 			int state = atoi((const char*)resbuf+1);
-			printf("%d\n", state);
+			// printf("%d\n", state);
 			if(state != last_state){
 				last_state = state;
-				send_osc(state);
+				send_osc(transmitSocket, state);
 			}
 		}
 		usleep(POLL_SLEEP_MS * 1000);
@@ -54,8 +68,16 @@ int send_ontrak_command(hid_device *handle){
 	return res;
 }
 
-int send_osc(int state){
-	printf("Sending OSC: %d\n", state);
+int send_osc(UdpTransmitSocket &transmitSocket, int state){
+	printf("\nSending OSC: %d\n", state);
+	dots = 0;
+	char buffer[OUTPUT_BUFFER_SIZE];
+    osc::OutboundPacketStream p( buffer, OUTPUT_BUFFER_SIZE );
+	p << osc::BeginBundleImmediate
+        << osc::BeginMessage( "/ontrak" ) 
+            << state << osc::EndMessage
+        << osc::EndBundle;
+    transmitSocket.Send( p.Data(), p.Size() );
 	return 0;
 }
 

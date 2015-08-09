@@ -1,6 +1,7 @@
 
 CC=g++
-CFLAGS=-Wall -lhidapi-libusb -fPIC
+OSCPACK=./oscpack_1_1_0/
+CFLAGS=-Wall -lhidapi-libusb -loscpack -lstdc++ -fPIC
 SRC=$(wildcard '*.c')
 
 all: test hidapi-osc
@@ -14,8 +15,8 @@ hidapi-osc: hidapi-osc.o
 test.o: test.c
 	$(CC) -c $(CFLAGS) test.c
 
-hidapi-osc.o: hidapi-osc.c hidapi-osc.h
-	$(CC) -c $(CFLAGS) hidapi-osc.c
+hidapi-osc.o: hidapi-osc.cpp hidapi-osc.h
+	$(CC) -c -x c++ $(CFLAGS) hidapi-osc.cpp
 
 clean: 
 	rm *.o test

@@ -5,4 +5,4 @@
 
 void usage();
 int send_ontrak_command(hid_device *handle);
-int send_osc(int state);
+int send_osc(UdpTransmitSocket &transmitSocket, int state);
