@@ -1,0 +1,13 @@
+#N canvas 265 242 450 300 10;
+#X obj 43 24 udpreceive 7000;
+#X obj 44 55 unpackOSC;
+#X obj 44 81 routeOSC /ontrak;
+#X floatatom 45 120 5 0 0 0 - - -, f 5;
+#X obj 45 179 outlet;
+#X obj 97 119 send ontrak;
+#X obj 225 35 import mrpeach;
+#X connect 0 0 1 0;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 2 0 5 0;
+#X connect 3 0 4 0;
