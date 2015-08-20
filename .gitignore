@@ -1,1 +1,6 @@
 sounds/
+hidapi-osc/hidapi-osc
+hidapi-osc/hidapi-osc.o
+hidapi-osc/test
+hidapi-osc/test.o
+
