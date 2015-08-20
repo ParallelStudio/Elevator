@@ -1,13 +1,18 @@
 #ifdef WIN32
 #include <windows.h>
+#include "hidapi.h"
+#include "osc/OscOutboundPacketStream.h"
+#include "ip/UdpSocket.h"
+#else
+#include <hidapi/hidapi.h>
+#include <oscpack/osc/OscOutboundPacketStream.h>
+#include <oscpack/ip/UdpSocket.h>
 #endif
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <string.h>
-#include <hidapi/hidapi.h>
-#include <oscpack/osc/OscOutboundPacketStream.h>
-#include <oscpack/ip/UdpSocket.h>
 #include "hidapi-osc.h"
 
 #define OUTPUT_BUFFER_SIZE 1024
