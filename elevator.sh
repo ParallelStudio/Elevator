@@ -19,6 +19,7 @@ PDEXT=${EXT}/osc:${EXT}/net
 
 # TODO: Customize the commandline here
 ${PD} -verbose \
+	-lib zexy \
 	-font-face "Lucida Console" -font-size 10 -font-weight normal \
 	-path ${PDDIR} \
 	-path ${ABS} \
