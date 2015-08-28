@@ -1,18 +1,24 @@
-#N canvas 546 549 513 421 10;
-#X obj 176 98 date, f 21;
-#X obj 185 134 select 4;
-#X obj 278 136 select 1;
-#X msg 185 157 1;
-#X msg 238 157 0;
-#X msg 278 158 1;
-#X msg 331 158 0;
-#X obj 141 71 t b b;
-#X obj 214 198 *;
-#X obj 175 236 spigot;
-#X obj 186 261 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
--1 -1;
-#X obj 141 45 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#N canvas 547 554 513 421 10;
+#X obj 96 114 date, f 21;
+#X obj 105 150 select 4;
+#X obj 198 152 select 1;
+#X msg 105 173 1;
+#X msg 158 173 0;
+#X msg 198 174 1;
+#X msg 251 186 0;
+#X obj 61 87 t b b;
+#X obj 134 214 *;
+#X obj 95 252 spigot;
+#X obj 95 275 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
+#X obj 61 61 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 61 32 inlet;
+#X obj 95 299 outlet;
+#X text 149 33 when bangs \, will provide a bang;
+#X text 148 51 on the outlet \, only when it is;
+#X text 148 68 april 1st;
+#X text 273 101 requires [date] from zexy;
 #X connect 0 1 1 0;
 #X connect 0 2 2 0;
 #X connect 1 0 3 0;
@@ -27,4 +33,6 @@
 #X connect 7 1 0 0;
 #X connect 8 0 9 1;
 #X connect 9 0 10 0;
+#X connect 10 0 13 0;
 #X connect 11 0 7 0;
+#X connect 12 0 11 0;
