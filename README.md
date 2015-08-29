@@ -54,8 +54,8 @@ Two Signals From Each Car...
 
 #Peak Volume dB - at least for starters...
 
--27db   bass
--20db lowmids
--31db highmids
--44db highs
--20db plucks 
+* -27db   bass
+* -20db lowmids
+* -31db highmids
+* -44db highs
+* -20db plucks 
