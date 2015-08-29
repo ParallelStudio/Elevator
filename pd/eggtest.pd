@@ -1,0 +1,10 @@
+#N canvas 601 273 450 300 10;
+#X msg 49 66 bang;
+#X obj 48 156 dac~;
+#X obj 92 135 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 49 106 egg~;
+#X connect 0 0 3 0;
+#X connect 3 0 1 0;
+#X connect 3 0 1 1;
+#X connect 3 1 2 0;
