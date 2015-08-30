@@ -51,11 +51,32 @@ Two Signals From Each Car...
 ##Plucks (1-2)
 * play randomly and intersperse with not playing any plucks on some triggers (trigger one of the pluck sound every other or every third time)
 
+#RMS and Times
 
-#Peak Volume dB - at least for starters...
+##bass
+* 0 sec 0 RMS
+* 5 sec 0.0501 RMS / -26db
+* 8 sec 0.0630RMS / -24db
+* 11 sec 0.0501 RMS / -26db
+* 13 sec 0.0158 RMS / -36db
+* 17 sec 0 RMS
 
-* -27db   bass
-* -20db lowmids
-* -31db highmids
-* -44db highs
-* -20db plucks 
+##lowmids
+* 0 sec 0 RMS
+* 8 sec  0.0501 RMS / -26 db
+* 18 sec 0 RMS
+
+##highmids
+* 0 sec 0 RMS
+* 8 sec  0.0501 RMS / -26db
+* 18 sec 0 RMS
+
+##highs
+* 0 sec 0 RMS
+* 8 sec  0.0017 RMS / -55db
+* 17 sec 0 RMS
+
+##plucks
+* 0 sec 0 RMS
+* 8 sec  0.0446 RMS / -27db
+* 17 sec 0 RMS
