@@ -50,3 +50,12 @@ Two Signals From Each Car...
 
 ##Plucks (1-2)
 * play randomly and intersperse with not playing any plucks on some triggers (trigger one of the pluck sound every other or every third time)
+
+
+#Peak Volume dB - at least for starters...
+
+* -27db   bass
+* -20db lowmids
+* -31db highmids
+* -44db highs
+* -20db plucks 
