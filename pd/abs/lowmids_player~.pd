@@ -1,0 +1,22 @@
+#N canvas 432 107 450 300 10;
+#X obj 23 172 elevator-looper~;
+#X obj 23 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 23 9 inlet start;
+#X obj 23 232 outlet~ audio;
+#X obj 235 229 outlet current_table;
+#X obj 151 2 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 175 -4 inlet floor_trigger;
+#X obj 232 167 symbol;
+#X msg 195 99 car_\$1_lowmids;
+#X obj 195 75 f \$1;
+#X connect 0 0 3 0;
+#X connect 1 0 0 0;
+#X connect 2 0 1 0;
+#X connect 5 0 9 0;
+#X connect 6 0 9 0;
+#X connect 7 0 4 0;
+#X connect 8 0 7 0;
+#X connect 8 0 0 1;
+#X connect 9 0 8 0;
