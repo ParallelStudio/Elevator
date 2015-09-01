@@ -53,6 +53,8 @@ Two Signals From Each Car...
 
 #RMS and Times (.2 added to make up for ethan's quiet mixing - nullified db)
 
+4 elevator cars with composed stereo sound in building 83 at Microsoft.
+
 ##bass
 * 0 sec 0 RMS
 * 5 sec 0.2501 RMS / -26db
