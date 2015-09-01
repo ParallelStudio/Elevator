@@ -26,7 +26,9 @@ echo '#X connect 1 0 2 0;'
 y=22
 for f in $@ ; do
 	f=`basename $f .wav`
-	echo "#X obj 26 $y table $f;"
+	echo "#X obj 26 $y table ${f}_L;"
+	y=$((y+20))
+	echo "#X obj 26 $y table ${f}_R;"
 	y=$((y+20))
 done
 
