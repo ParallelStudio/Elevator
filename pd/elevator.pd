@@ -1,4 +1,4 @@
-#N canvas 118 68 927 596 10;
+#N canvas -242 180 927 596 10;
 #X obj 23 30 tgl 15 0 sgdoor1 rgdoor1 empty 17 7 0 10 -262144 -1 -1
 0 1;
 #X obj 69 31 tgl 15 0 sgfloor1 rgfloor1 empty 17 7 0 10 -262144 -1
@@ -58,7 +58,7 @@
 #X obj 497 191 audio_tables_loader;
 #X obj 343 317 plucks~ 1;
 #X obj 258 371 highs~ 1;
-#X obj 150 423 output~;
+#X obj 65 412 output~;
 #X connect 0 0 11 0;
 #X connect 1 0 11 1;
 #X connect 2 0 3 0;

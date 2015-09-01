@@ -1,4 +1,4 @@
-#N canvas 161 271 947 589 10;
+#N canvas 11 93 947 589 10;
 #X obj 68 527 outlet~;
 #X obj 245 219 adssr~;
 #X obj 68 461 *~;
@@ -6,7 +6,7 @@
 #X obj 68 116 plucks_player~ \$1;
 #X msg 386 132 load plucks-floor;
 #X msg 385 154 save plucks-floor;
-#X obj 535 219 adssr~;
+#X obj 533 221 adssr~;
 #X obj 589 110 loadbang;
 #X text 416 19 door;
 #X msg 588 156 save plucks-door;
@@ -16,6 +16,11 @@
 #X obj 209 15 r floor\$1;
 #X obj 67 19 inlet play;
 #X obj 203 47 t b b;
+#X obj 491 443 / 8;
+#X floatatom 491 467 5 0 0 0 - - -, f 5;
+#X obj 491 487 * 5;
+#X floatatom 491 511 5 0 0 0 - - -, f 5;
+#X msg 491 418 24.4;
 #X connect 1 0 2 1;
 #X connect 2 0 0 0;
 #X connect 3 0 5 0;
@@ -33,3 +38,7 @@
 #X connect 15 0 4 0;
 #X connect 16 0 1 0;
 #X connect 16 1 4 1;
+#X connect 17 0 18 0;
+#X connect 18 0 19 0;
+#X connect 19 0 20 0;
+#X connect 21 0 17 0;

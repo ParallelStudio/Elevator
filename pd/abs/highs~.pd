@@ -1,4 +1,4 @@
-#N canvas 207 106 895 560 10;
+#N canvas 71 94 895 560 10;
 #X symbolatom 139 106 15 0 0 0 - - -, f 15;
 #X obj 52 200 adssr~;
 #X obj 17 361 *~;
@@ -14,8 +14,8 @@
 #X msg 90 162 save highs-floor;
 #X msg 215 161 load highs-floor;
 #X obj 476 130 loadbang;
-#X msg 351 159 save highs-floor;
-#X msg 476 158 load highs-floor;
+#X msg 351 159 save highs-door;
+#X msg 476 158 load highs-door;
 #X connect 1 0 2 1;
 #X connect 2 0 3 0;
 #X connect 4 0 2 1;
