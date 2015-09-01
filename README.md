@@ -54,7 +54,7 @@ Two Signals From Each Car...
 #RMS and Times 
 
 for door (short signal) - truncate all of these sounds so they begin at 5 seconds 
-(.2 added to make up for ethan's quiet mixing - nullified notated db values below, but keeping them to maintain notes of original voume relationships)
+(.2 rms added to make up for ethan's quiet mixing - nullified notated db values below, but keeping them to maintain notes of original voume relationships)
 
 ##bass
 * 0 sec 0 RMS
