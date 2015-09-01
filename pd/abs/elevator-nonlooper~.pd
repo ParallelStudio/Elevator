@@ -1,0 +1,14 @@
+#N canvas 59 141 495 399 10;
+#X obj 109 273 outlet~;
+#X obj 280 11 inlet tablename;
+#X obj 63 2 inlet start;
+#X obj 217 270 outlet~;
+#X obj 109 227 *~ 1;
+#X obj 217 224 *~ 1;
+#X obj 109 189 oneshot-player-stereo~;
+#X connect 1 0 6 1;
+#X connect 2 0 6 0;
+#X connect 4 0 0 0;
+#X connect 5 0 3 0;
+#X connect 6 0 4 0;
+#X connect 6 1 5 0;

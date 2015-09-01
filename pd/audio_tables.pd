@@ -1,7 +1,7 @@
 #N canvas 637 404 776 670 10;
 #X text 26 2 generated file \, do not edit!;
 #X obj 279 20 inlet;
-#X msg 279 52 list car_4_plucks2 car_4_plucks1 car_4_lowmids car_4_highs3 car_4_highs2 car_4_highs1 car_4_highmids4 car_4_highmids3 car_4_highmids2 car_4_highmids1 car_4_bass car_3_plucks2 car_3_plucks1 car_3_lowmids car_3_highs3 car_3_highs2 car_3_highs1 car_3_highmids4 car_3_highmids3 car_3_highmids2 car_3_highmids1 car_3_bass car_2_plucks2 car_2_plucks1 car_2_lowmids car_2_highs3 car_2_highs2 car_2_highs1 car_2_highmids4 car_2_highmids3 car_2_highmids2 car_2_highmids1 car_2_bass car_1_plucks2 car_1_plucks1 car_1_LowMids car_1_highs3 car_1_highs2 car_1_highs1 car_1_highmids4 car_1_highmids3 car_1_highmids2 car_1_highmids1 car_1_bass ;
+#X msg 279 52 list car_4_plucks2 car_4_plucks1 car_4_lowmids car_4_highs3 car_4_highs2 car_4_highs1 car_4_highmids4 car_4_highmids3 car_4_highmids2 car_4_highmids1 car_4_bass car_3_plucks2 car_3_plucks1 car_3_lowmids car_3_highs3 car_3_highs2 car_3_highs1 car_3_highmids4 car_3_highmids3 car_3_highmids2 car_3_highmids1 car_3_bass car_2_plucks2 car_2_plucks1 car_2_lowmids car_2_highs3 car_2_highs2 car_2_highs1 car_2_highmids4 car_2_highmids3 car_2_highmids2 car_2_highmids1 car_2_bass car_1_plucks2 car_1_plucks1 car_1_lowmids car_1_highs3 car_1_highs2 car_1_highs1 car_1_highmids4 car_1_highmids3 car_1_highmids2 car_1_highmids1 car_1_bass ;
 #X obj 279 300 outlet;
 #X connect 2 0 3 0;
 #X connect 1 0 2 0;
@@ -21,8 +21,8 @@
 #X obj 26 282 table car_1_highs2_R;
 #X obj 26 302 table car_1_highs3_L;
 #X obj 26 322 table car_1_highs3_R;
-#X obj 26 342 table car_1_LowMids_L;
-#X obj 26 362 table car_1_LowMids_R;
+#X obj 26 342 table car_1_lowmids_L;
+#X obj 26 362 table car_1_lowmids_R;
 #X obj 26 382 table car_1_plucks1_L;
 #X obj 26 402 table car_1_plucks1_R;
 #X obj 26 422 table car_1_plucks2_L;

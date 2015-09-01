@@ -1,22 +1,22 @@
-#N canvas 16 278 539 258 10;
-#X obj 23 172 elevator-looper~;
-#X obj 23 38 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
--1;
-#X obj 23 9 inlet start;
-#X obj 23 232 outlet~ audio;
+#N canvas 9 17 539 258 10;
 #X obj 285 225 outlet current_table;
-#X obj 151 2 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+#X obj 325 2 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 175 -4 inlet floor_trigger;
 #X obj 232 167 symbol;
 #X obj 195 75 f \$1;
 #X msg 195 99 car_\$1_bass;
-#X connect 0 0 3 0;
-#X connect 1 0 0 0;
-#X connect 2 0 1 0;
-#X connect 5 0 8 0;
-#X connect 6 0 8 0;
-#X connect 7 0 4 0;
-#X connect 8 0 9 0;
-#X connect 9 0 7 0;
-#X connect 9 0 0 1;
+#X obj 23 232 outlet~ L;
+#X obj 132 232 outlet~ R;
+#X obj 23 172 elevator-nonlooper~;
+#X obj 78 136 t b a;
+#X connect 1 0 4 0;
+#X connect 2 0 4 0;
+#X connect 3 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 3 0;
+#X connect 5 0 9 0;
+#X connect 8 0 6 0;
+#X connect 8 1 7 0;
+#X connect 9 0 8 0;
+#X connect 9 1 8 1;
