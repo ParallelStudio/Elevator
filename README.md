@@ -51,7 +51,7 @@ Two Signals From Each Car...
 ##Plucks (1-2)
 * play randomly and intersperse with not playing any plucks on some triggers (trigger one of the pluck sound every other or every third time)
 
-#RMS and Times (.2 added to make up for ethan's quiet mixing - nullified db)
+#RMS and Times 
 
 for door (short signal) - truncate all of these sounds so they begin at 5 seconds 
 (.2 added to make up for ethan's quiet mixing - nullified notated db values below, but keeping them to maintain notes of original voume relationships)
