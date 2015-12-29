@@ -54,32 +54,32 @@ Two Signals From Each Car...
 #RMS and Times 
 
 for door (short signal) - truncate all of these sounds so they begin at 5 seconds 
-(.2 added to make up for ethan's quiet mixing - nullified notated db values below, but keeping them to maintain notes of original voume relationships)
+
 
 ##bass
 * 0 sec 0 RMS
-* 5 sec 0.2501 RMS / -26db
-* 3 sec 0.2630RMS / -24db
-* 3 sec 0.2501 RMS / -26db
-* 2 sec 0.2158 RMS / -36db
+* 5 sec 0.5 RMS / -6db
+* 3 sec 0.63RMS / -4db
+* 3 sec 0.5 RMS / -6db
+* 2 sec 0.16 RMS / -16db
 * 4 sec 0 RMS
 
 ##lowmids
 * 0 sec 0 RMS
-* 8 sec  0.2501 RMS / -26 db
+* 8 sec  0.5 RMS / -6 db
 * 10 sec 0 RMS
 
 ##highmids
 * 0 sec 0 RMS
-* 8 sec  0.2501 RMS / -26db
+* 8 sec  0.5 RMS / -6db
 * 10 sec 0 RMS
 
 ##highs
 * 0 sec 0 RMS
-* 8 sec  0.2017 RMS / -55db
+* 8 sec  0.02 RMS / -35db
 * 9 sec 0 RMS
 
 ##plucks
 * 0 sec 0 RMS
-* 8 sec  0.2446 RMS / -27db
+* 8 sec  0.45 RMS / -7db
 * 9 sec 0 RMS
