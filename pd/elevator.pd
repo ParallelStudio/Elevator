@@ -1,22 +1,22 @@
-#N canvas 117 50 927 596 10;
+#N canvas 0 50 1004 615 10;
 #X obj 23 30 tgl 15 0 sgdoor1 rgdoor1 empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 69 31 tgl 15 0 sgfloor1 rgfloor1 empty 17 7 0 10 -262144 -1
 -1 1 1;
 #X obj 519 24 ontrak;
 #X obj 519 48 to_cars;
 #X obj 94 30 tgl 15 0 sgdoor2 rgdoor2 empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 140 31 tgl 15 0 sgfloor2 rgfloor2 empty 17 7 0 10 -262144 -1
--1 0 1;
+-1 1 1;
 #X obj 164 31 tgl 15 0 sgdoor3 rgdoor3 empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 210 32 tgl 15 0 sgfloor3 rgfloor3 empty 17 7 0 10 -262144 -1
 -1 0 1;
 #X obj 235 31 tgl 15 0 sgdoor4 rgdoor4 empty 17 7 0 10 -262144 -1 -1
-0 1;
+1 1;
 #X obj 281 32 tgl 15 0 sgfloor4 rgfloor4 empty 17 7 0 10 -262144 -1
--1 0 1;
+-1 1 1;
 #X obj 235 51 vcar 2;
 #X obj 23 50 vcar 1;
 #X obj 94 50 vcar 2;
@@ -50,28 +50,87 @@
 #X connect 8 0 16 0;
 #X connect 9 0 17 0;
 #X restore 404 60 pd guibridge;
-#X obj 497 191 audio_tables_loader;
+#X obj 496 115 audio_tables_loader;
 #X obj 651 115 s floor1;
-#X obj 655 262 r floor1;
-#X obj 657 297 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+#X obj 685 257 r floor1;
+#X obj 687 292 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X obj 501 231 s loaded;
-#X obj 42 312 stereo-output~ 3 4;
-#X obj 497 165 loadbang;
+#X obj 500 155 s loaded;
+#X obj 496 89 loadbang;
 #X obj 651 67 r loaded;
-#X obj 45 250 car~ 1;
 #X obj 651 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X obj 746 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
 #X obj 745 120 s door1;
-#X text 277 536 test on site: can we arrive at a floor \, press door
+#X text 566 526 test on site: can we arrive at a floor \, press door
 close \, and get another floor signal within 17 secs (env length) of
 prior;
-#X text 274 474 make sure we aren't getting door signals on close/open
+#X text 572 467 make sure we aren't getting door signals on close/open
 interruptions;
-#X text 216 285 if door signal happens less than 17 seconds since a
+#X text 558 404 if door signal happens less than 17 seconds since a
 floor signal it's ignored \, otherwise we use it;
+#X obj 684 154 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 779 162 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 684 176 s floor2;
+#X obj 778 181 s door2;
+#X obj 651 115 s floor1;
+#X obj 651 93 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 746 101 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 745 120 s door1;
+#X text 431 -3 run hidapi-osc.exe localhost:7000 from Elevator/hidapi-osc
+;
+#X obj 877 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 877 106 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 877 128 s floor1;
+#X obj 877 128 s floor3;
+#X obj 879 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 879 151 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 880 173 s floor3;
+#X obj 880 173 s floor4;
+#X obj 311 166 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 45 336 output~ 3;
+#X obj 152 341 output~ 4;
+#X obj 291 344 output~ 5;
+#X obj 444 344 output~ 6;
+#X obj 565 155 s audio_on;
+#X obj 289 209 car~ 3;
+#X msg 344 295 0;
+#X msg 356 315 1;
+#X obj 290 303 *~ 1;
+#X obj 356 269 delay 17000;
+#X obj 304 273 *~ 0.6;
+#X msg 497 291 0;
+#X msg 509 311 1;
+#X obj 444 297 *~ 1;
+#X obj 509 265 delay 17000;
+#X obj 457 269 *~ 0.6;
+#X obj 443 203 car~ 4;
+#X msg 52 291 0;
+#X msg 64 311 1;
+#X obj 8 296 *~ 1;
+#X obj 64 265 delay 17000;
+#X obj 15 262 *~ 0.6;
+#X obj 7 202 car~ 1;
+#X obj 159 244 egg~ 2;
+#X msg 198 295 0;
+#X msg 210 315 1;
+#X obj 150 303 *~ 1;
+#X obj 210 269 delay 17000;
+#X obj 158 273 *~ 0.6;
+#X obj 149 209 car~ 2;
+#X obj 16 233 egg~ 1;
+#X obj 305 244 egg~ 3;
+#X obj 458 240 egg~ 4;
 #X connect 0 0 11 0;
 #X connect 1 0 11 1;
 #X connect 2 0 3 0;
@@ -82,10 +141,51 @@ floor signal it's ignored \, otherwise we use it;
 #X connect 8 0 10 0;
 #X connect 9 0 10 1;
 #X connect 15 0 19 0;
+#X connect 15 0 50 0;
 #X connect 17 0 18 0;
-#X connect 21 0 15 0;
-#X connect 22 0 24 0;
-#X connect 23 0 20 0;
-#X connect 23 1 20 1;
-#X connect 24 0 16 0;
-#X connect 25 0 26 0;
+#X connect 20 0 15 0;
+#X connect 21 0 22 0;
+#X connect 22 0 16 0;
+#X connect 23 0 24 0;
+#X connect 28 0 30 0;
+#X connect 29 0 31 0;
+#X connect 33 0 32 0;
+#X connect 34 0 35 0;
+#X connect 37 0 40 0;
+#X connect 41 0 43 0;
+#X connect 51 0 54 0;
+#X connect 52 0 54 1;
+#X connect 53 0 54 1;
+#X connect 54 0 48 0;
+#X connect 55 0 53 0;
+#X connect 56 0 48 0;
+#X connect 57 0 59 1;
+#X connect 58 0 59 1;
+#X connect 59 0 49 0;
+#X connect 60 0 58 0;
+#X connect 61 0 49 0;
+#X connect 62 0 59 0;
+#X connect 63 0 65 1;
+#X connect 64 0 65 1;
+#X connect 65 0 46 0;
+#X connect 66 0 64 0;
+#X connect 67 0 46 0;
+#X connect 68 0 65 0;
+#X connect 69 0 74 0;
+#X connect 69 1 70 0;
+#X connect 69 1 73 0;
+#X connect 70 0 72 1;
+#X connect 71 0 72 1;
+#X connect 72 0 47 0;
+#X connect 73 0 71 0;
+#X connect 74 0 47 0;
+#X connect 75 0 72 0;
+#X connect 76 0 67 0;
+#X connect 76 1 63 0;
+#X connect 76 1 66 0;
+#X connect 77 0 56 0;
+#X connect 77 1 52 0;
+#X connect 77 1 55 0;
+#X connect 78 0 61 0;
+#X connect 78 1 57 0;
+#X connect 78 1 60 0;
